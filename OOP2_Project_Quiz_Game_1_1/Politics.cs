@@ -1,9 +1,9 @@
 ﻿using System;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Gameplay
+    public class Politics : ICategory
     {
-        public Gameplay()
+        public Politics()
         {
 
         }
