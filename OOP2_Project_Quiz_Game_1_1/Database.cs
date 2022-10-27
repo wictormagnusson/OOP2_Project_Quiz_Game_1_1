@@ -5,7 +5,7 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Database
     {
-        public List<KeyValuePair<string, string>> questions { get;set; } = new List<KeyValuePair<string, string>>();
+        public List<KeyValuePair<string, string>> questions { get; set; } = new List<KeyValuePair<string, string>>();
         public List<KeyValuePair<string, string>> answers { get; set; } = new List<KeyValuePair<string, string>>();
         public List<KeyValuePair<string, List<string>>> alternatives { get; set; } = new List<KeyValuePair<string, List<string>>>();
 
@@ -41,7 +41,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             answers.Add(new KeyValuePair<string, string>("Geography", "Ulf Kristersson"));
 
             List<string> q1 = new List<string>();
-            q1.Add("Magdalena Ansersson");
+            q1.Add("Magdalena Andersson");
             q1.Add("Fredrik Reinfeldt");
             q1.Add("Göran Persson");
             q1.Add("Ulf Kristersson");

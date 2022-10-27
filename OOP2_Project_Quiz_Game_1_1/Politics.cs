@@ -6,9 +6,9 @@ namespace OOP2_Project_Quiz_Game_1_1
     {
         public string question { get; set; }
         public List<string> alternative { get; set; }
-        public string answer { get; set; }
-
-        public Politics(List<KeyValuePair<string, string>> questions, List<KeyValuePair<string, string>> answers, List<KeyValuePair<string, List<string>>> alternatives)
+        public string answer { get; set; } 
+        
+        public void GetQuestion(List<KeyValuePair<string, string>> questions)
         {
             foreach (var item in questions)
             {
@@ -17,7 +17,10 @@ namespace OOP2_Project_Quiz_Game_1_1
                     question = item.Value;
                 }
             }
+        }
 
+        public void GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives)
+        {
             foreach (var item in alternatives)
             {
                 if (item.Key == "Politics")
@@ -25,7 +28,10 @@ namespace OOP2_Project_Quiz_Game_1_1
                     alternative = item.Value;
                 }
             }
+        }
 
+        public void GetAnswers(List<KeyValuePair<string,string>> answers)
+        {
             foreach (var item in answers)
             {
                 if (item.Key == "Politics")
@@ -34,6 +40,8 @@ namespace OOP2_Project_Quiz_Game_1_1
                 }
             }
         }
+
+        Question makeQuestion = new Question();
     }
 }
 
