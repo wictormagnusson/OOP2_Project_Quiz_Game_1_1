@@ -10,20 +10,13 @@ namespace OOP2_Project_Quiz_Game_1_1
         public List<string> alternativeText { get; set; }
 
 
-        Question _question = new Question(string questionText,List<string> alternativeText, string answerText)
+      //  Question _question = new Question(string questionText,List<string> alternativeText, string answerText)
         
 
         public Politics() // Ta emot tre listor ;questions, answers, alternatives
         {
         }
-
-        /*       foreach (var item in answers)
-            {
-                if (item.Key == "Politics")
-                {
-                    answer = item.Value;
-                }
-            } */
+       
 
         public void GetQuestion(List<KeyValuePair<string, string>> questions)
             {
@@ -31,7 +24,7 @@ namespace OOP2_Project_Quiz_Game_1_1
                 {
                     if (item.Key == "Politics")
                     {
-                        question = item.Value;
+                    questionText = item.Value;
                     }
                 }
             }
@@ -41,11 +34,23 @@ namespace OOP2_Project_Quiz_Game_1_1
             {
                 if (item.Key == "Politics")
                 {
-                    alternative = item.Value;
+                    alternativeText = item.Value;
                 }
             }
         }
-  
+
+
+        public void GetAnswer(List<KeyValuePair<string, string>> answers)
+        {
+            foreach (var item in answers)
+            {
+                if (item.Key == "Politics")
+                {
+                    answerText = item.Value;
+                }
+            }
+        }
+               
         
     }
 }

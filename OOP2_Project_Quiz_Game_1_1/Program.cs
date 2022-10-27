@@ -4,14 +4,14 @@ using System;
 using System.Collections.Generic;
 using OOP2_Project_Quiz_Game_1_1;
 
-Console.WriteLine("Hello, World!");
 
 static void Main(string[] args)
 {
+    Console.WriteLine("HEj jag är Elsas branch");
     QDatabase database = new QDatabase();
+    Gameplay gameplay = new Gameplay();
+    
     
    // Politics politics = new Politics();
 }
 
-Console.WriteLine("Hello, Santa!");
-Console.WriteLine("Hello summer 2023");

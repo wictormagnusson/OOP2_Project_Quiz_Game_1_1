@@ -6,7 +6,9 @@ namespace OOP2_Project_Quiz_Game_1_1
     {
         public void GetQuestion(List<KeyValuePair<string, string>> questions);
         public void GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives);
-   
+        public void GetAnswer(List<KeyValuePair<string, string>> questions);
+
+
     }
 }
 
