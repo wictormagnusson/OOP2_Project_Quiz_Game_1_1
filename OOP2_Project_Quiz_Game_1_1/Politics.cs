@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 namespace OOP2_Project_Quiz_Game_1_1
 {
+    // filtrering av information givet kategori
+
     public class Politics : ICategory
     {
        
         public string questionText { get; set; }
         public string answerText { get; set; }
         public List<string> alternativeText { get; set; }
+        QDatabase _QDatabase = new QDatabase();
 
+        Question QuestionObject = new Question(questionText, answerText, alternativeText);
 
-      //  Question _question = new Question(string questionText,List<string> alternativeText, string answerText)
         
 
         public Politics() // Ta emot tre listor ;questions, answers, alternatives
         {
+
         }
        
 
@@ -50,8 +54,13 @@ namespace OOP2_Project_Quiz_Game_1_1
                 }
             }
         }
-               
-        
+        //Här vill vi skapa question objekt givet information från listor?? 
+        public void WholeQuestion()
+        {
+            Question _question = new Question(GetQuestion, GetAlternatives, GetAnswer);
+
+        }
+
     }
 }
 

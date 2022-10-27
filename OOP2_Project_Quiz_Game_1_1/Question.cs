@@ -5,7 +5,7 @@ namespace OOP2_Project_Quiz_Game_1_1
     {
         public string QuestionText { get; set; }
         public List<string> Alternatives { get; set; }
-        public string Answer { get; set; }
+        public string Answer { get; set; } 
 
         public Question(string _QuestionText, List<string> _Alternatives, string _Answer)
         {
@@ -13,7 +13,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             Alternatives = _Alternatives;
             Answer = _Answer;
         }
-
+        ICategory.GetQuestion(); 
 
     }
 }

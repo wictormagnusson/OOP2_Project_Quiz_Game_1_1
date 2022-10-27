@@ -10,13 +10,14 @@ namespace OOP2_Project_Quiz_Game_1_1
 
         public Factory(QDatabase _database)
         {
+            database = _database;
         }
 
-        // skapar listor av Categoryobjekts
+        // skapar en lista av Categoryobjekts givet val av användaren 
         //
 
 
-        public ICategory CreateCategory(string category)  //gör om till lamba expressions
+        public ICategory CreateCategory(string category)  
         {
            
             List<ICategory> categoryList = new List<ICategory>();
