@@ -4,28 +4,39 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Politics : ICategory
     {
-     /*   public string question { get; set; }
-        public string answer { get; set; }
-        public List<string> alternative { get; set; }
-        public Politics(List<KeyValuePair<string, string>> questions, List<KeyValuePair<string, List<string>>> alternatives, List<KeyValuePair<string, string>> answers) // Ta emot tre listor ;questions, answers, alternatives
+       
+        public string questionText { get; set; }
+        public string answerText { get; set; }
+        public List<string> alternativeText { get; set; }
+
+
+        Question _question = new Question(string questionText,List<string> alternativeText, string answerText)
+        
+
+        public Politics() // Ta emot tre listor ;questions, answers, alternatives
         {
+        }
 
-            foreach (var item in questions)
-            {
-                if (item.Key == "Politics")
-                {
-                    question = item.Value;
-                }
-            }
-
-            foreach (var item in answers)
+        /*       foreach (var item in answers)
             {
                 if (item.Key == "Politics")
                 {
                     answer = item.Value;
                 }
-            }
+            } */
 
+        public void GetQuestion(List<KeyValuePair<string, string>> questions)
+            {
+                foreach (var item in questions)
+                {
+                    if (item.Key == "Politics")
+                    {
+                        question = item.Value;
+                    }
+                }
+            }
+        public void GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives)
+        {
             foreach (var item in alternatives)
             {
                 if (item.Key == "Politics")
@@ -33,8 +44,9 @@ namespace OOP2_Project_Quiz_Game_1_1
                     alternative = item.Value;
                 }
             }
-
-        } */
+        }
+  
+        
     }
 }
 

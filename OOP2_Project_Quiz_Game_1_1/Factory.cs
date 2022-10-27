@@ -4,11 +4,16 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Factory
     {
-        public Factory()
+        QDatabase database;
+
+        // skapar listor av Questionobjekts
+        //
+
+        public Factory(QDatabase _database)
         {
         }
 
-     /*   public ICategory Create(string category)
+        public ICategory CreateCategory(string category)
         {
             switch (category)
             {
@@ -17,7 +22,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             }
 
         }
-     */
+     
     }
 }
 
