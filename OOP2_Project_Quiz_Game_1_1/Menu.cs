@@ -1,9 +1,9 @@
 ﻿using System;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Geography
+    public class Menu
     {
-        public Geography()
+        public Menu()
         {
         }
     }

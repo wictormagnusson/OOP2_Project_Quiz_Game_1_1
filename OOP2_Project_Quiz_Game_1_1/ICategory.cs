@@ -4,9 +4,10 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public interface ICategory
     {
-        public void GetQuestion(List<KeyValuePair<string, string>> questions);
-        public void GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives);
-        public void GetAnswer(List<KeyValuePair<string, string>> questions);
+        // ÄNdra till att ta emot databasobjektslista 
+        public string GetQuestion(List<KeyValuePair<string, string>> questions);
+        public List<string> GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives);
+        public string GetAnswer(List<KeyValuePair<string, string>> questions);
 
 
     }

@@ -13,7 +13,6 @@ namespace OOP2_Project_Quiz_Game_1_1
             Alternatives = _Alternatives;
             Answer = _Answer;
         }
-        ICategory.GetQuestion(); 
 
     }
 }

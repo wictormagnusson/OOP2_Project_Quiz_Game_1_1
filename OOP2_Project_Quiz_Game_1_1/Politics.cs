@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    // filtrering av information givet kategori
+    // filtrering av information i databas givet kategori
+
+    // Göra om till en ISort
 
     public class Politics : ICategory
     {
@@ -10,11 +12,10 @@ namespace OOP2_Project_Quiz_Game_1_1
         public string questionText { get; set; }
         public string answerText { get; set; }
         public List<string> alternativeText { get; set; }
+
         QDatabase _QDatabase = new QDatabase();
-
-        Question QuestionObject = new Question(questionText, answerText, alternativeText);
-
-        
+      //  _QDatabase.questions; // Hämta ut questionslistan från databas
+     //   _QDatabase.alternatives; // Hämta ut questionslistan från databas
 
         public Politics() // Ta emot tre listor ;questions, answers, alternatives
         {
@@ -22,7 +23,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         }
        
 
-        public void GetQuestion(List<KeyValuePair<string, string>> questions)
+        public string GetQuestion(List<KeyValuePair<string, string>> questions) // Byta till databasobjektlista
             {
                 foreach (var item in questions)
                 {
@@ -31,20 +32,22 @@ namespace OOP2_Project_Quiz_Game_1_1
                     questionText = item.Value;
                     }
                 }
+            return questionText;
             }
-        public void GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives)
+        public List<string> GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives) // Byta till databasobjektlista
         {
             foreach (var item in alternatives)
             {
                 if (item.Key == "Politics")
                 {
-                    alternativeText = item.Value;
+                     alternativeText = item.Value;
                 }
             }
+            return alternativeText;
         }
 
 
-        public void GetAnswer(List<KeyValuePair<string, string>> answers)
+        public string GetAnswer(List<KeyValuePair<string, string>> answers) // Byta till databasobjektlista
         {
             foreach (var item in answers)
             {
@@ -53,13 +56,9 @@ namespace OOP2_Project_Quiz_Game_1_1
                     answerText = item.Value;
                 }
             }
+            return answerText;
         }
-        //Här vill vi skapa question objekt givet information från listor?? 
-        public void WholeQuestion()
-        {
-            Question _question = new Question(GetQuestion, GetAlternatives, GetAnswer);
-
-        }
+     
 
     }
 }

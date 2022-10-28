@@ -16,38 +16,18 @@ namespace OOP2_Project_Quiz_Game_1_1
             {
                  new KeyValuePair<string, string>("Politics","Who is the prime minister of Sweden?"),
                  new KeyValuePair<string, string>("Politics","Who is the prime minister of Great Britain?"),
-                 new KeyValuePair<string, string>("Politics","Who is the prime minister of France?"),
-                 new KeyValuePair<string, string>("Politics","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Politics","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string, string>("Geography","Who is the prime minister of Sweden?"),
+                 new KeyValuePair<string, string>("Politics","Who is the president of France?"),
+                 new KeyValuePair<string, string>("Politics","Who is the Kansler of Germany?"),
+                
             };
 
                answers = new List<KeyValuePair<string, string>>()
             {
-                 new KeyValuePair<string,string>("Politics","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Politics","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Politics","Who is the president of Sweden?"),
-                 new KeyValuePair<string,string>("Politics","Who is the chansler of Sweden?"),
-                 new KeyValuePair<string,string>("Politics","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Sports","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),
-                 new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),
+                 new KeyValuePair<string,string>("Politics","Ulf Kristersson"),
+                 new KeyValuePair<string,string>("Politics","Rishi Sunak"),
+                 new KeyValuePair<string,string>("Politics","Emanuel Macron"),
+                 new KeyValuePair<string,string>("Politics","Olaf Shoiz"),
+                
             };
 
 
@@ -87,18 +67,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         }
 
 
-
-
-
-
-
-/*    public List<KeyValuePair<string, List<string>>> alternatives = new List<KeyValuePair<string, List<string>>>(
-
-                ("Politics", ("Magdalena Andersson", "Ulf Kristersson", "Stefan Löfven", "Fredrik Reinfeldt")),
-                ("Politics", ("Boris Johnson", "Liz Truss", "Rishi Sunak", "Tony Blair")),
-               ("Politics", ("Emanuel Macron", "Jacques Chirac", "Nicolas Sarkozy", "Francois Hollande")),
-               ("Politics", ("Olaf Shoiz", "Angela Merkel", "Gerhard Schröder", "Helmut Kohl"))); */
-        
+/*  
         public void printList <T>(List<T> list)
             {
                 foreach (var a in list)
@@ -107,7 +76,7 @@ namespace OOP2_Project_Quiz_Game_1_1
                 }
             }
 
-
+        */
 
 
         
