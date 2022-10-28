@@ -18,26 +18,23 @@ namespace OOP2_Project_Quiz_Game_1_1
 
         // skapar en lista av Questionobjekts givet kategorival av användaren 
         //måste ta emot antal frågor
-        public List<Question> CreateCategory(string category, int numberOfQuestions)
+        public List<Question> CreateCategory(string categoryChoice, int numberOfQuestions)
         {
 
             List<Question> QuestionList = new List<Question>();
 
             for (int i = 1; i < numberOfQuestions; i++)
             {
-                switch (category)
+                switch (categoryChoice)
                 {
                     case "Politics":
-
                      Politics politics = new Politics();
                     _question = politics.GetQuestion(database.questions);
                     _alternatives = politics.GetAlternatives(database.alternatives);
                     _answer = politics.GetAnswer(database.answers);
-
-                        Question questionObject = new Question(_question, _alternatives,_answer);
-
-                        QuestionList.Add(questionObject);
-                        break;
+                    Question questionObject = new Question(_question, _alternatives,_answer);
+                    QuestionList.Add(questionObject);
+                    break;
 
                 /*    case "Geography":
                         Geography geography = new Geography();

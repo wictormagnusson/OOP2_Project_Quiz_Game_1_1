@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    // filtrering av information i databas givet kategori
-
-    // Göra om till en ISort
+    // filtrerar information i databaslistor givet vald kategori
 
     public class Politics : ICategory
     {
@@ -13,15 +11,18 @@ namespace OOP2_Project_Quiz_Game_1_1
         public string answerText { get; set; }
         public List<string> alternativeText { get; set; }
 
-        QDatabase _QDatabase = new QDatabase();
-      //  _QDatabase.questions; // Hämta ut questionslistan från databas
-     //   _QDatabase.alternatives; // Hämta ut questionslistan från databas
-
         public Politics() // Ta emot tre listor ;questions, answers, alternatives
         {
-
+            QDatabase _QDatabase = new QDatabase();
+            
         }
        
+
+      //  _QDatabase.questions; // Hämta ut questionslistan från databas
+      //   _QDatabase.alternatives; // Hämta ut questionslistan från databas
+
+       
+     //   List<KeyValuePair<string, string>> questions
 
         public string GetQuestion(List<KeyValuePair<string, string>> questions) // Byta till databasobjektlista
             {

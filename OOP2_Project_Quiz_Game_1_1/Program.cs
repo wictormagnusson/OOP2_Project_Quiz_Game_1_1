@@ -10,19 +10,15 @@ using OOP2_Project_Quiz_Game_1_1;
     QDatabase QDatabase = new QDatabase(); // Skapa databasen 
   //  Player player = new Player(); // Skapa en player
     Factory factory = new Factory(QDatabase); // Skapa en Factory som tar emot databasen
-
-    Console.WriteLine("Please choose category:\nPolitics\nSports\nGeography\n"); //Uppdatera och lägg i egen klass
-    string inputString = Console.ReadLine()!; // användaren väljer kategori
-    Console.WriteLine("Please choose number of questions 1-10"); //Uppdatera och lägg i egen klass
-    int inputInt;
-    int.TryParse(Console.ReadLine(), out inputInt);
-Console.WriteLine(inputInt);
+    Menu menu = new Menu(); // Visar menu och frågar användare om kategori och antal frågor
+    menu.showMenu();
+   
 
 List<Question> listOfQuestions = new List<Question>();
 
-listOfQuestions= factory.CreateCategory(inputString, inputInt); // valet skickas till factory som gör lista av vald kategori
+listOfQuestions= factory.CreateCategory(menu.inputString, menu.inputInt); // valet skickas till factory som gör lista av vald kategori
 
-for (int i = 0; i < inputInt; i++)
+for (int i = 0; i < menu.inputInt; i++)
 {
     Console.WriteLine(listOfQuestions[i]);
 }
