@@ -16,8 +16,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             database = _database;
         }
 
-        // skapar en lista av Questionobjekts givet kategorival av användaren 
-        //måste ta emot antal frågor
+        // skapar en lista av Questionobjekts givet kategorival och antal frågor av användaren 
         public List<Question> CreateCategory(string categoryChoice, int numberOfQuestions)
         {
 

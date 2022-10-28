@@ -4,25 +4,24 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     // filtrerar information i databaslistor givet vald kategori
 
+    // hur blir det om politics returnerar listor med objekt sorterade på kategori
+
     public class Politics : ICategory
-    {
-       
+    {      
         public string questionText { get; set; }
         public string answerText { get; set; }
         public List<string> alternativeText { get; set; }
+
+        //  _QDatabase.questions; // Hämta ut questionslistan från databas
+        //   _QDatabase.alternatives; // Hämta ut questionslistan från databas
+
 
         public Politics() // Ta emot tre listor ;questions, answers, alternatives
         {
             QDatabase _QDatabase = new QDatabase();
             
         }
-       
-
-      //  _QDatabase.questions; // Hämta ut questionslistan från databas
-      //   _QDatabase.alternatives; // Hämta ut questionslistan från databas
-
-       
-     //   List<KeyValuePair<string, string>> questions
+      
 
         public string GetQuestion(List<KeyValuePair<string, string>> questions) // Byta till databasobjektlista
             {
@@ -47,7 +46,6 @@ namespace OOP2_Project_Quiz_Game_1_1
             return alternativeText;
         }
 
-
         public string GetAnswer(List<KeyValuePair<string, string>> answers) // Byta till databasobjektlista
         {
             foreach (var item in answers)
@@ -59,8 +57,18 @@ namespace OOP2_Project_Quiz_Game_1_1
             }
             return answerText;
         }
-     
 
-    }
+       
 }
 
+    /*  
+       public List<Question> ListOfQuestions()
+    {
+        List<Question> questionList = new List<Question>();
+        Question question = new Question(questionText, alternativeText, answerText);
+        questionList.Add(question);
+        return questionList;
+    }   
+    */
+
+}

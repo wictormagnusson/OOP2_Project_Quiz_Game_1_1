@@ -46,6 +46,5 @@ for (int i = 0; i < menu.inputInt; i++)
 
    */
 
-    // Politics politics = new Politics();
-
+    
 
