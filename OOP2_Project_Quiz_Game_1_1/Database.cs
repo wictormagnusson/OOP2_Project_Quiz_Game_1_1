@@ -23,7 +23,6 @@ namespace OOP2_Project_Quiz_Game_1_1
             questions.Add(new KeyValuePair<string, string>("Geography", "Who is the prime minister of Sweden?"));
             questions.Add(new KeyValuePair<string, string>("Geography", "Who is the prime minister of Sweden?"));
             questions.Add(new KeyValuePair<string, string>("Geography", "Who is the prime minister of Sweden?"));
-
      
             answers.Add(new KeyValuePair<string, string>("Politics","Ulf Kristersson"));
             answers.Add(new KeyValuePair<string, string>("Politics", "Rishi Sunak"));
@@ -80,8 +79,6 @@ namespace OOP2_Project_Quiz_Game_1_1
                  new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),
                  new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),
                  new KeyValuePair<string,string>("Geography","Who is the prime minister of Sweden?"),*/
-            
-          
 
         }
     }

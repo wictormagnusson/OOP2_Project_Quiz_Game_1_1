@@ -4,8 +4,8 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Player
     {
-        public string Name;
-        public int Score;
+        public string Name { get; set; }
+        public int Score { get; set; }
 
         public Player(string playerName)
         {

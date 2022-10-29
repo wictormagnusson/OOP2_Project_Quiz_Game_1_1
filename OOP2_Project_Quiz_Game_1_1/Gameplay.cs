@@ -5,20 +5,34 @@ namespace OOP2_Project_Quiz_Game_1_1
     public class Gameplay
     {
         private string Title = "Welcome to the Quiz Game!";
-        private Player CurrentPlayer;
+        //public Player CurrentPlayer { get; set; }
+        public string Category { get; set; }
 
         public Gameplay()
         {
 
         }
 
+        public void ChooseCategory()
+        {
+            Console.WriteLine("Please choose category: ");
+            Category = Console.ReadLine();
+        }
+
         public void Play()
         {
             Console.WriteLine(Title);
             Console.Write("Type in your name: ");
-            CurrentPlayer.Name = Console.ReadLine();
-
+            string nameInput = Console.ReadLine();
+            Player CurrentPlayer = new Player(nameInput);
+            Console.WriteLine("Welcome " + CurrentPlayer.Name + "!");
         }
+
+        public void TakeAnswer()
+        {
+             
+        }
+       
     }
 }
 
