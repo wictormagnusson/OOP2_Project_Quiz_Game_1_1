@@ -1,9 +1,9 @@
 ﻿using System;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Geography: ICategory
+    public class Music : ICategory
     {
-        public Geography()
+        public Music()
         {
             QDatabase _QDatabase = new QDatabase();
 
@@ -20,7 +20,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         {
             foreach (var item in questions)
             {
-                if (item.Key == "Geography")
+                if (item.Key == "Music")
                 {
                     questionText = item.Value;
                 }
@@ -31,7 +31,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         {
             foreach (var item in alternatives)
             {
-                if (item.Key == "Geography")
+                if (item.Key == "Music")
                 {
                     alternativeText = item.Value;
                 }
@@ -43,7 +43,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         {
             foreach (var item in answers)
             {
-                if (item.Key == "Geography")
+                if (item.Key == "Music")
                 {
                     answerText = item.Value;
                 }
@@ -52,8 +52,6 @@ namespace OOP2_Project_Quiz_Game_1_1
         }
 
 
-
     }
-
 }
 

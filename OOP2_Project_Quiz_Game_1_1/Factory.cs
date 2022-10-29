@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+//using Internal;
+//using Internal;
+
 namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Factory
@@ -27,28 +30,28 @@ namespace OOP2_Project_Quiz_Game_1_1
                 switch (categoryChoice)
                 {
                     case "Politics":
-                     Politics politics = new Politics();
+                    Politics politics = new Politics();
                     _question = politics.GetQuestion(database.questions);
+                     
                     _alternatives = politics.GetAlternatives(database.alternatives);
                     _answer = politics.GetAnswer(database.answers);
-                    Question questionObject = new Question(_question, _alternatives,_answer);
-                    QuestionList.Add(questionObject);
+                    Question questionObjectPol = new Question(_question, _alternatives,_answer);
+                    QuestionList.Add(questionObjectPol);
+          
+
                     break;
 
-                /*    case "Geography":
-                        Geography geography = new Geography();
-                        _question = geography.GetQuestion(database.questions);
-                        _alternatives = politics.GetAlternatives(database.alternatives);
-                        _answer = politics.GetAnswer(database.answers);
-                        Question questionObject = new Question(_question, _alternatives, _answer);
-                        QuestionList.Add(questionObject);
+                    case "Geography":
+                    Geography geography = new Geography();
+                    _question = geography.GetQuestion(database.questions);
+                    _alternatives = geography.GetAlternatives(database.alternatives);
+                    _answer = geography.GetAnswer(database.answers);
+                    Question questionObjectGeo = new Question(_question, _alternatives, _answer);
+                    QuestionList.Add(questionObjectGeo);
 
-                        return QuestionList;
-
-
-                        return QuestionList.Add(new Geograpy geography());
-                        break;
-
+               
+                    break;
+/*
                     case "Sport":
                         return QuestionList.Add(new Sports sports());
                         break; */
@@ -57,6 +60,10 @@ namespace OOP2_Project_Quiz_Game_1_1
                         break;
                 }              
             }
+
+            Console.WriteLine(_question);
+
+
             return QuestionList;
 
 

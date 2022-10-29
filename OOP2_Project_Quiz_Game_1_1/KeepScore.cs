@@ -9,7 +9,7 @@ namespace OOP2_Project_Quiz_Game_1_1
     {
 
         public int Score { get; set; }
-        private string CorrectAnswer { get; set; }
+        private string CorrectAnswer { get; set; } // Byta till int
         QDatabase qDatabase = new QDatabase();
          
 
@@ -19,6 +19,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             CorrectAnswer = "";
         }
 
+        // INPUT ANSWER MÅSTE VI BYTA TILL ATT DET ÄR SIFFROR, KOMMER BLI SÅ SVÅRT ANNARS
         public int CheckAnswer(List<Question> questionList, int questionNo, string InputAnswer)
         {
             CorrectAnswer = questionList[questionNo].Answer;
