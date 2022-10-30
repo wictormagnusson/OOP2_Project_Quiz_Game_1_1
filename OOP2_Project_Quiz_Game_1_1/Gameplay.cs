@@ -31,6 +31,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         public void PrintScore(int score)
         {
             Console.WriteLine("You scored " + score + " points!");
+            Console.ReadLine();
         }
        
     }

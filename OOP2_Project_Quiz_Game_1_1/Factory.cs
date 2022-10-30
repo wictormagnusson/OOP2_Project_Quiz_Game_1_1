@@ -4,37 +4,22 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Factory
     {
+        public ICategory category { get; set; }
         public Politics NewPolitics { get; set; }
+        public Geography NewGeography { get; set; }
+        public Music NewMusic { get; set; }
+
         public Factory(string category, Database database, int count)
         {
-            if (category == "Politics")
+            ICategory choice = category switch
             {
-                NewPolitics = new Politics(database,count);
-            }
+                "Politics" => NewPolitics = new Politics(database, count),
+                "Music" => NewMusic = new Music(database, count),
+                "Geography" => NewGeography = new Geography(database, count),
+
+                _ => throw new ArgumentException("Invalid category!")
+            };
         }
-
-        // skapar listor av Categoryobjekts
-
-        /*public Politics CreateCategory(string category,Database database)  //gör om till lamba expressions
-        {
-
-            if (category == "Politics")
-            {
-               NewPolitics = new Politics(database);
-            }
-
-            /*for (int i = 1; i < 10; i++)
-            {
-                var choice = category switch
-                {
-                    "Politics" => categoryList.Add(new Politics(database).MakeQuestion()),
-                    "Geography" => "Geography", 
-                    "Sports" => "Sports",
-                    _ => "Invalid category!"
-                };
-            }
-            return NewPolitics;
-        }*/
     }
 }
 
