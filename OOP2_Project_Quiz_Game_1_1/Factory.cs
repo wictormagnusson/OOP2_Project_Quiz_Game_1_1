@@ -4,20 +4,23 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Factory
     {
-        public Factory()
+        public Politics NewPolitics { get; set; }
+        public Factory(string category, Database database, int count)
         {
-
+            if (category == "Politics")
+            {
+                NewPolitics = new Politics(database,count);
+            }
         }
 
         // skapar listor av Categoryobjekts
 
-        public List<Question> CreateCategory(string category,Database database)  //gör om till lamba expressions
+        /*public Politics CreateCategory(string category,Database database)  //gör om till lamba expressions
         {
-            List<Question> categoryList = new List<Question>();
 
             if (category == "Politics")
             {
-                categoryList.Add(new Politics(database).MakeQuestion());
+               NewPolitics = new Politics(database);
             }
 
             /*for (int i = 1; i < 10; i++)
@@ -29,9 +32,9 @@ namespace OOP2_Project_Quiz_Game_1_1
                     "Sports" => "Sports",
                     _ => "Invalid category!"
                 };
-            }*/
-            return categoryList;
-        }
+            }
+            return NewPolitics;
+        }*/
     }
 }
 

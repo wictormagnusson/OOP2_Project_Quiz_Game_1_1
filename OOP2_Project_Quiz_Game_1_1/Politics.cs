@@ -7,9 +7,8 @@ namespace OOP2_Project_Quiz_Game_1_1
         public string question { get; set; }
         public List<string> alternative { get; set; }
         public string answer { get; set; }
-        public int counter { get; } = 0;
-
-        Question makeQuestion;
+        public int counter { get; set; } = 0;
+        public List<Question> QuestionList { get; set; } = new List<Question>();
 
         public string GetQuestion(List<KeyValuePair<string, string>> questions)
         {
@@ -18,15 +17,9 @@ namespace OOP2_Project_Quiz_Game_1_1
                 if (questions[i].Key == "Politics")
                 {
                     question = questions[i].Value;
+                    return question;
                 }
             }
-            /*foreach (var item in questions)
-            {
-                if (item.Key == "Politics")
-                {
-                    question = item.Value;
-                }
-            }*/
             return question;
         }
 
@@ -37,15 +30,9 @@ namespace OOP2_Project_Quiz_Game_1_1
                 if (alternatives[i].Key == "Politics")
                 {
                     alternative = alternatives[i].Value;
+                    return alternative;
                 }
             }
-            /*foreach (var item in alternatives)
-            {
-                if (item.Key == "Politics")
-                {
-                    alternative = item.Value;
-                }
-            }*/
             return alternative;
         }
 
@@ -56,28 +43,21 @@ namespace OOP2_Project_Quiz_Game_1_1
                 if (answers[i].Key == "Politics")
                 {
                     answer = answers[i].Value;
+                    return answer;
                 }
             }
-            /*foreach (var item in answers)
-            {
-                if (item.Key == "Politics")
-                {
-                    answer = item.Value;
-                }
-            }*/
             return answer;
         }
 
-        public Politics(Database database)
+        public Politics(Database database, int count)
         {
-            makeQuestion = new Question(GetQuestion(database.questions),
-            GetAlternatives(database.alternatives),
-            GetAnswers(database.answers));
-        }
-
-        public Question MakeQuestion()
-        {
-            return makeQuestion;
+            for (int i = 0; i < count; i++)
+            {
+                QuestionList.Add(new Question(GetQuestion(database.questions),
+                GetAlternatives(database.alternatives),
+                GetAnswers(database.answers)));
+                counter++;
+            }
         }
     }
 }

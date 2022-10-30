@@ -5,23 +5,11 @@ using OOP2_Project_Quiz_Game_1_1;
 
 Gameplay gameplay = new Gameplay();
 Database database = new Database();
-Factory factory = new Factory();
-List<Question> questionDisplay = new List<Question>();
 gameplay.Play();
 gameplay.ChooseCategory();
-questionDisplay = factory.CreateCategory(gameplay.Category, database);
+Factory factory = new Factory(gameplay.Category, database, 4);
+DisplayQuestionlist displayQuestionList = new DisplayQuestionlist(factory.NewPolitics.QuestionList);
 
-foreach (var Question in questionDisplay)
-{
-    Console.WriteLine("Question 1: " + Question.QuestionText);
-
-    foreach (var item in Question.Alternatives)
-    {
-        Console.WriteLine("Alternative: " + item);
-    }
-
-    Console.WriteLine("Correct answer: "+Question.Answer);
-}
 
 
 /*string printList(List<string> hej)
