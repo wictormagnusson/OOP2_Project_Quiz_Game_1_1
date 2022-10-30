@@ -9,17 +9,26 @@ using OOP2_Project_Quiz_Game_1_1;
  //   Gameplay gameplay = new Gameplay();
     QDatabase QDatabase = new QDatabase(); // Skapa databasen 
     Player player = new Player(); // Skapa en player
-    Factory factory = new Factory(QDatabase); // Skapa en Factory som tar emot databasen
     Menu menu = new Menu(); // Visar menu och frågar användare om kategori och antal frågor
-    menu.showMenu();
+                            // menu.showMenu();
+                            //IterateOverQuestions iterate = new IterateOverQuestions(factory);
+Factory factory = new Factory(QDatabase,menu.inputString,menu.inputInt); // Skapa en Factory som tar emot databasen
+
+//IterateOverQuestions iterate = new IterateOverQuestions(factory);
+
+
+for (int i = 0; i < 3; i++)
+{
+    Console.WriteLine("Question " + (i+1) + factory.politics.questionText + "\n");
+    //factory.category
+}
 
 
 
 
+//List<Question> listOfQuestions = new List<Question>();
 
-List<Question> listOfQuestions = new List<Question>();
-
-factory.CreateCategory(menu.inputString, menu.inputInt); // valet skickas till factory som gör lista av vald kategori
+//factory.CreateCategory(menu.inputString, menu.inputInt); // valet skickas till factory som gör lista av vald kategori
 
 /* quest = ICategory.GetQuestion(QDatabase.questions);
 que.GetAlternatives();

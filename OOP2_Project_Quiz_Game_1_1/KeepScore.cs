@@ -9,19 +9,31 @@ namespace OOP2_Project_Quiz_Game_1_1
     {
 
         public int Score { get; set; }
-        private string CorrectAnswer { get; set; } // Byta till int
+       // private string CorrectAnswer { get; set; } // Byta till int
+        private int CorrectAnswer { get; set; } // Byta till int
+
         QDatabase qDatabase = new QDatabase();
          
 
         public KeepScore()
         {
             Score = 0;
-            CorrectAnswer = "";
+            CorrectAnswer = 0;
         }
 
         // INPUT ANSWER MÅSTE VI BYTA TILL ATT DET ÄR SIFFROR, KOMMER BLI SÅ SVÅRT ANNARS
-        public int CheckAnswer(List<Question> questionList, int questionNo, string InputAnswer)
+        public int CheckAnswer(List<Question> questionList, int questionNo, int InputAnswer)
         {
+
+            if (questionList[questionNo] == questionList[questionNo].Alternatives[InputAnswer - 1])
+
+            {
+                Score++;
+            }
+
+
+            }
+
             CorrectAnswer = questionList[questionNo].Answer;
 
             if (InputAnswer == CorrectAnswer)
