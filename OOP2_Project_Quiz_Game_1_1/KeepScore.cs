@@ -3,7 +3,7 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class KeepScore
     {
-        public string CorrectAnswer { get; set; }
+        public int CorrectAnswer { get; set; }
         public int Score { get; set; } = 0;
 
         public KeepScore()
@@ -11,15 +11,16 @@ namespace OOP2_Project_Quiz_Game_1_1
 
         }
 
-        public int ChecAnswer(List<Question> questionList, int questionNo, string answer)
+        public int CheckAnswer(List<Question> questionList, int questionNo, int choice)
         {
-            CorrectAnswer = questionList[questionNo].Answer;
-            if (answer == CorrectAnswer)
+            if (questionList[questionNo].Answer == questionList[questionNo].Alternatives[choice - 1])
             {
                 Score++;
             }
+     
             return Score;
         }
+
     }
 
 }

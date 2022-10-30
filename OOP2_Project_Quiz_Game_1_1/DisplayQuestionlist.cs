@@ -3,7 +3,9 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class DisplayQuestionlist
     {
-        public DisplayQuestionlist(List<Question> Qlist)
+        public int inputInt { get; set; }
+        public int score { get; set; }
+        public DisplayQuestionlist(List<Question> Qlist, KeepScore keepscore)
         {
             int questionCount = 1;
 
@@ -17,11 +19,15 @@ namespace OOP2_Project_Quiz_Game_1_1
                     Console.WriteLine($"Alternative {altCount}: {item}");
                     altCount++;
                 }
-                Console.WriteLine("Correct answer: " + Question.Answer);
+                int input = Convert.ToInt32(Console.ReadLine());
+                score = keepscore.CheckAnswer(Qlist, questionCount - 1, input);
+
                 questionCount++;
                 Console.WriteLine();
             }
         }
+
+
     }
 }
 

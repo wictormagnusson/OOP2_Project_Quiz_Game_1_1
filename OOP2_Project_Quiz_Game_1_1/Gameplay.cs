@@ -5,7 +5,6 @@ namespace OOP2_Project_Quiz_Game_1_1
     public class Gameplay
     {
         private string Title = "Welcome to the Quiz Game!";
-        //public Player CurrentPlayer { get; set; }
         public string Category { get; set; }
 
         public Gameplay()
@@ -28,9 +27,9 @@ namespace OOP2_Project_Quiz_Game_1_1
             Console.WriteLine("Welcome " + CurrentPlayer.Name + "!");
         }
 
-        public void TakeAnswer()
+        public void PrintScore(int score)
         {
-             
+            Console.WriteLine("You scored " + score + " points!");
         }
        
     }
