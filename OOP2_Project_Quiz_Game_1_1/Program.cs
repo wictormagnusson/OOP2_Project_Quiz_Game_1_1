@@ -11,7 +11,7 @@ gameplay.ChooseCategory();
 Factory factory = new Factory(gameplay.Category, database, 4);
 
 //DisplayQuestionlist displayQuestionList = new DisplayQuestionlist(factory.NewPolitics.QuestionList, keepscore);
-//DisplayQuestionlist displayQuestionList = new DisplayQuestionlist(factory.NewGeography.QuestionList, keepscore);
-DisplayQuestionlist displayQuestionList = new DisplayQuestionlist(factory.NewMusic.QuestionList, keepscore);
+DisplayQuestionlist displayQuestionList = new DisplayQuestionlist(factory.NewGeography.QuestionList, keepscore);
+//DisplayQuestionlist displayQuestionList = new DisplayQuestionlist(factory.NewMusic.QuestionList, keepscore);
 
 gameplay.PrintScore(displayQuestionList.score);

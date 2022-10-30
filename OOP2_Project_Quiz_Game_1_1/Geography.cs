@@ -7,7 +7,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         public string question { get; set; }
         public List<string> alternative { get; set; }
         public string answer { get; set; }
-        public int counter { get; set; } = 0;
+        public int counter { get; set; } = 4;
         public List<Question> QuestionList { get; set; } = new List<Question>();
 
         public string GetQuestion(List<KeyValuePair<string, string>> questions)
