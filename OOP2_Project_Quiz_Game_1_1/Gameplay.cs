@@ -15,6 +15,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         public void ChooseCategory()
         {
             Console.WriteLine("Please choose category: ");
+            Console.WriteLine("Politics | Music | Geography");
             Category = Console.ReadLine();
         }
 
