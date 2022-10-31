@@ -6,8 +6,6 @@ namespace OOP2_Project_Quiz_Game_1_1
     {
         //Flytta new av objekt hit? Eller skapa new i main men skicka in de objekten här 
         private string Title = "Welcome to the Quiz Game!";
-    //    public string Category { get; set; } // Byta till objekt av category
-
         public int CatergoryChoice { get; set; }
 
         public Gameplay()

@@ -4,11 +4,24 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Geography : ICategory
     {
+        //Egenskaper
         public string question { get; set; }
         public List<string> alternative { get; set; }
         public string answer { get; set; }
         public int counter { get; set; } = 4; // Hårdkodning
         public List<Question> QuestionList { get; set; } = new List<Question>();
+
+        //Konstruktor
+        public Geography(Database database, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                QuestionList.Add(new Question(GetQuestion(database.questions),
+                GetAlternatives(database.alternatives),
+                GetAnswers(database.answers)));
+                counter++;
+            }
+        }
 
         public string GetQuestion(List<KeyValuePair<string, string>> questions)
         {
@@ -49,15 +62,6 @@ namespace OOP2_Project_Quiz_Game_1_1
             return answer;
         }
 
-        public Geography(Database database, int count)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                QuestionList.Add(new Question(GetQuestion(database.questions),
-                GetAlternatives(database.alternatives),
-                GetAnswers(database.answers)));
-                counter++;
-            }
-        }
+    
     }
 }

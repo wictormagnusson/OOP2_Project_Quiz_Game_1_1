@@ -10,6 +10,21 @@ namespace OOP2_Project_Quiz_Game_1_1
         public int counter { get; set; } = 8; // Hårdkodning
         public List<Question> QuestionList { get; set; } = new List<Question>();
 
+
+        //Konstruktor
+        public Music(Database database, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                QuestionList.Add(new Question(GetQuestion(database.questions),
+                GetAlternatives(database.alternatives),
+                GetAnswers(database.answers)));
+                counter++;
+            }
+        }
+
+
+
         public string GetQuestion(List<KeyValuePair<string, string>> questions)
         {
             for (int i = counter; i < questions.Count; i++)
@@ -49,16 +64,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             return answer;
         }
 
-        public Music(Database database, int count)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                QuestionList.Add(new Question(GetQuestion(database.questions),
-                GetAlternatives(database.alternatives),
-                GetAnswers(database.answers)));
-                counter++;
-            }
-        }
+ 
     }
 }
 

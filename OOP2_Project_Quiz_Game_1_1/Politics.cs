@@ -10,17 +10,47 @@ namespace OOP2_Project_Quiz_Game_1_1
         public int counter { get; set; } = 0; // Hårdkodning
         public List<Question> QuestionList { get; set; } = new List<Question>();
 
+        //Konstruktor
+        public Politics(Database database, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                QuestionList.Add(new Question(GetQuestion(database.questions),
+                GetAlternatives(database.alternatives),
+                GetAnswers(database.answers)));
+                counter++;
+            }
+        }
+
+
+        //Byta våra forloopar till lamda expressions 
+
         public string GetQuestion(List<KeyValuePair<string, string>> questions)
         {
-            for (int i = counter; i < questions.Count; i++)
+            // lamda
+            
+              questions.ForEach(questions => 
+              {
+                  if (questions.Key == "Politics")
+                  {
+                      question = questions.Value;
+                     
+                  }
+
+              });
+
+            return question; // skriver ut sista 
+
+
+         /*   for (int i = counter; i < questions.Count; i++)
             {
                 if (questions[i].Key == "Politics")
                 {
                     question = questions[i].Value;
                     return question;
                 }
-            }
-            return question;
+            } 
+            return question; */
         }
 
         public List<string> GetAlternatives(List<KeyValuePair<string, List<string>>> alternatives)
@@ -49,16 +79,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             return answer;
         }
 
-        public Politics(Database database, int count)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                QuestionList.Add(new Question(GetQuestion(database.questions),
-                GetAlternatives(database.alternatives),
-                GetAnswers(database.answers)));
-                counter++;
-            }
-        }
+       
     }
 }
 

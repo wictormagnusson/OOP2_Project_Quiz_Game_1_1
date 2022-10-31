@@ -1,7 +1,9 @@
 ﻿using System;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Sorter : ICategory // Möjligt sätt att hantera alla alternativ till, minskar duplicering av kod
+    public class Sorter : ICategory
+        // Möjligt sätt att hantera alla alternativ till, minskar duplicering av kod--> dock tar det bort anledningen till factorry så då måste vi byta till typ bridge..
+        // då får vi ha typ gameplay som interface och göra konkreta klasser som har Icategorys som reference. har en 
     {
         public string question { get; set; }
         public List<string> alternative { get; set; }

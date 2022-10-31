@@ -4,10 +4,11 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Factory
     {
-        public ICategory category { get; set; }
+      public ICategory category { get; set; }
   
-        public Factory(int categoryChoice, Database database, int count) // ändra kategorichoice till en int 
+        public Factory(int categoryChoice, Database database, int count) // ta in en Icategory för abstrakt injektion...men hur? 
         {
+            //Pattern matching
             ICategory choice = categoryChoice switch
             {
                 1 => category = new Politics(database, count), // ändrat politics till category

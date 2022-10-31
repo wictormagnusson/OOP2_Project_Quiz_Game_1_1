@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public interface ICategory
+
+    // kan vi göra vårt interface till generics?
+
+
+    public interface ICategory //<in T1, out T2>
     {
         public string question { get; set; }
         public List<string> alternative { get; set; }
