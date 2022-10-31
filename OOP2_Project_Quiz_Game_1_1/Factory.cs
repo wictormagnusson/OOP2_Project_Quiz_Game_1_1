@@ -5,19 +5,16 @@ namespace OOP2_Project_Quiz_Game_1_1
     public class Factory
     {
         public ICategory category { get; set; }
-        public Politics NewPolitics { get; set; }
-        public Geography NewGeography { get; set; }
-        public Music NewMusic { get; set; }
-
-        public Factory(string category, Database database, int count)
+  
+        public Factory(int categoryChoice, Database database, int count) // ändra kategorichoice till en int 
         {
-            ICategory choice = category switch
+            ICategory choice = categoryChoice switch
             {
-                "Politics" => NewPolitics = new Politics(database, count),
-                "Music" => NewMusic = new Music(database, count),
-                "Geography" => NewGeography = new Geography(database, count),
+                1 => category = new Politics(database, count), // ändrat politics till category
+                2 => category = new Music(database, count), // ändrat newmusic till category
+                3 => category = new Geography(database, count), // ändrat newgeography till category
 
-                _ => throw new ArgumentException("Invalid category!")
+                _ => throw new ArgumentException("Invalid category!") 
             };
         }
     }

@@ -12,7 +12,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             foreach (var Question in Qlist)
             {
                 int altCount = 1;
-                Console.WriteLine($"Question {questionCount}: {Question.QuestionText}");
+                Console.WriteLine($"\nQuestion {questionCount}: {Question.QuestionText}\n");
                 foreach (var item in Question.Alternatives)
                 {
 
