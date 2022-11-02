@@ -17,7 +17,7 @@ namespace OOP2_Project_Quiz_Game_1_1
                  new KeyValuePair<string, string>("Politics","Who is the prime minister of Sweden?"),
                  new KeyValuePair<string, string>("Politics","Who is the prime minister of Great Britain?"),
                  new KeyValuePair<string, string>("Politics","Who is the president of France?"),
-                 new KeyValuePair<string, string>("Politics","Who is the Kansler of Germany?"),
+                 new KeyValuePair<string, string>("Politics","Who is the chancellor of Germany?"),
 
                  new KeyValuePair<string, string>("Geography","What is the fourth biggest city of Sweden?"),
                  new KeyValuePair<string, string>("Geography","What country has the biggest population in Europe?"),

@@ -13,15 +13,15 @@ namespace OOP2_Project_Quiz_Game_1_1
             {
                 int altCount = 1;
                 Console.WriteLine($"\nQuestion {questionCount}: {Question.QuestionText}\n");
+
                 foreach (var item in Question.Alternatives)
                 {
-
                     Console.WriteLine($"Alternative {altCount}: {item}");
                     altCount++;
                 }
+
                 int input = Convert.ToInt32(Console.ReadLine());
                 score = keepscore.CheckAnswer(Qlist, questionCount - 1, input);
-
                 questionCount++;
                 Console.WriteLine();
             }

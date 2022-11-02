@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Sorter : ICategory
@@ -21,8 +21,6 @@ namespace OOP2_Project_Quiz_Game_1_1
                 counter++;
             }
         }
-
-      
 
         public string GetQuestion(List<KeyValuePair<string, string>> questions)
         {
@@ -95,5 +93,5 @@ namespace OOP2_Project_Quiz_Game_1_1
 
       
         }
-    }
+    }*/
 
