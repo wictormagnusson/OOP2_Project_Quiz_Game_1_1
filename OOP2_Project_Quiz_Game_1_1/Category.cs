@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Category : ICategory<List<KeyValuePair<string, string>>, string, int, string>
+    public abstract class Category : ICategory<List<KeyValuePair<string, string>>, string, int, string>
     {
         public Counter newCategory  { get; set; } = new Counter();
         public string question { get; set; }

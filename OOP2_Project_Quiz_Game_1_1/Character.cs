@@ -1,7 +1,7 @@
 ﻿using System;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Character : IPlayer
+    public abstract class Character : IPlayer
     {
         public string Name { get; set; }
         public string Color { get; set; }

@@ -12,7 +12,6 @@ namespace OOP2_Project_Quiz_Game_1_1
         public List<Question> QuestionList { get; set; }
         public int counter { get; set; }
         public Tout GetValue(Tin inputList, Tin2 choice, Tin3 counter);
-
     }
 }
 
