@@ -8,6 +8,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         public string Color { get; set; }
         public int Legs { get; set; }
         public int Score { get; set; }
+        public string Type { get; set; }
     }
 }
 

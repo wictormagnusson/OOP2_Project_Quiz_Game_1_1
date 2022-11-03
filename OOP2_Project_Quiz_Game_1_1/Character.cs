@@ -7,6 +7,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         public string Color { get; set; }
         public int Legs { get; set; }
         public int Score { get; set; }
+        public string Type { get; set; }
 
         public Character()
         {
@@ -23,31 +24,34 @@ namespace OOP2_Project_Quiz_Game_1_1
 
         public class Unicorn : Character
         {
-            public Unicorn(string name, string color, int legs)
+            public Unicorn(string name, string color, int legs, string type)
             {
                 Name = name;
                 Color = color;
                 Legs = legs;
+                Type = type;
             }
         }
 
         public class BuzzLightYear : Character
         {
-            public BuzzLightYear(string name, string color, int legs)
+            public BuzzLightYear(string name, string color, int legs, string type)
             {
                 Name = name;
                 Color = color;
                 Legs = legs;
+                Type = type;
             }
         }
 
-        public class Teddybear : Character
+        public class TeddyBear : Character
         {
-            public Teddybear(string name, string color, int legs)
+            public TeddyBear(string name, string color, int legs, string type)
             {
                 Name = name;
                 Color = color;
                 Legs = legs;
+                Type = type;
             }
         }
     }

@@ -29,8 +29,14 @@ namespace OOP2_Project_Quiz_Game_1_1
             Console.WriteLine("Choose your character:");
             Console.WriteLine("1: TeddyBear | 2: BuzzLightYear | 3: Unicorn | 4: Random character");
             CharacterChoice = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine();
             Console.WriteLine("\n");
+            Console.WriteLine();
+        }
+
+        public void DisplayCharacter (Character character)
+        {
+            Console.WriteLine($"You chose a {character.Color} {character.Type} with {character.Legs} legs that is called {character.Name}.");
+            Console.WriteLine();
         }
 
         public void PrintScore(int score, Character character)

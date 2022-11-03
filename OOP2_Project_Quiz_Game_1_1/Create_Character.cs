@@ -12,9 +12,9 @@ namespace OOP2_Project_Quiz_Game_1_1
             //Pattern matching
             Character newCharacter = characterChoice switch
             {
-                1 => character = new Teddybear("BabyTeddyBear", "Sunny Yellow", 4),
-                2 => character =  new BuzzLightYear("BabyBuzzLightYear", "Space Gray", 2), 
-                3 => character = new Unicorn("BabyUnicorn", "Magic Purple", 4), 
+                1 => character = new TeddyBear("BabyTeddyBear", "Sunny Yellow", 4, "TeddyBear"),
+                2 => character =  new BuzzLightYear("BabyBuzzLightYear", "Space Gray", 2, "BuzzLightYear"), 
+                3 => character = new Unicorn("BabyUnicorn", "Magic Purple", 4, "Unicorn") , 
                 //4 =>  Tänker att man kan randomise tillbaka till 1-3 istället för att skapa en färdig objektlista att randomise över. Överkurs?
                 _ => throw new ArgumentException("Invalid character!")
             };
