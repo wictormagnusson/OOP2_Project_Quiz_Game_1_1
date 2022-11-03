@@ -3,7 +3,8 @@ using static OOP2_Project_Quiz_Game_1_1.Character;
 
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Create_Character : Character
+    //Factory för att skapa karaktär givet val från användaren
+    public class Create_Character : Character, IPlayer
     {
         public Character character { get; set; }
         public Random rnd { get; set; } = new Random();

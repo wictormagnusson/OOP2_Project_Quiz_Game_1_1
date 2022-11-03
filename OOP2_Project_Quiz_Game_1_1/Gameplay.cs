@@ -9,11 +9,12 @@ namespace OOP2_Project_Quiz_Game_1_1
         public int CategoryChoice { get; set; }
         public int CharacterChoice { get; set; }
         
-        public Gameplay()
+        public Gameplay(ICategory<List<KeyValuePair<string, string>>, string, string> category, IPlayer player)
         {
 
         }
 
+        /*
         public void ChooseCategory()
         {
             Console.WriteLine("To play the game, please choose category 1-3:");
@@ -23,16 +24,21 @@ namespace OOP2_Project_Quiz_Game_1_1
           //  Category = Console.ReadLine();
         }
 
-        public void Play()
+        public void ChooseCharacter()
         {
-            Console.WriteLine(Title);
             Console.WriteLine("Choose your character:");
             Console.WriteLine("1: TeddyBear | 2: BuzzLightYear | 3: Unicorn | 4: Random character");
             CharacterChoice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
+        }
+ */
+        public void Play()
+        {
+            Console.WriteLine(Title);
+           
             Console.WriteLine("\n");
         }
-
+       
         public void PrintScore(int score, Character character)
         {
             Console.WriteLine("\nGreat job " + character.Name + "! You scored " + score + " points!");
