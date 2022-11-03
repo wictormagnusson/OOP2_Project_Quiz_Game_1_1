@@ -3,7 +3,6 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Menu
     {
-
         private string Title = "Welcome to the Quiz Game!";
         public int CategoryChoice { get; set; }
         public int CharacterChoice { get; set; }
@@ -11,7 +10,6 @@ namespace OOP2_Project_Quiz_Game_1_1
         public Menu()
         {
             Play();
-            
             ChooseCategory();
         }
 
