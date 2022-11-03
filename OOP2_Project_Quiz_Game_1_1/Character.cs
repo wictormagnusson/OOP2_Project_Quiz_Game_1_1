@@ -1,7 +1,7 @@
 ﻿using System;
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Character : IPlayer
+    public abstract class Character : IPlayer
     {
         public string Name { get; set; }
         public string Color { get; set; }
@@ -9,9 +9,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         public int Score { get; set; }
 
         public Character()
-        {
-
-        } 
+        {} 
 
         public Character random(List<Character> input)
         {

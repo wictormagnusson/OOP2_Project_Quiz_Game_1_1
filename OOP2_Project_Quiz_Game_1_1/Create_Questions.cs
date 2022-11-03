@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 namespace OOP2_Project_Quiz_Game_1_1
 {
+    //Factory för att skapa frågelista givet vald kategori
     public class Create_Questions
     {
       public ICategory<List<KeyValuePair<string, string>>, string, string> category { get; set; }
