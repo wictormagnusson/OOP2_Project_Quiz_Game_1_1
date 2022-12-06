@@ -20,7 +20,7 @@ namespace OOP2_Project_Quiz_Game_1_1
             int index = random.Next(input.Count);
             Character output = input[index];
             return output;
-        }
+        } 
 
         public class Unicorn : Character
         {
