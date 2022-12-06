@@ -31,7 +31,7 @@ namespace OOP2_Project_Quiz_Game_1_1
 
             };
 
-            answers = new List<KeyValuePair<string, string>>() // ÄNDRA TILL NUMMER
+            answers = new List<KeyValuePair<string, string>>() 
             {
                  new KeyValuePair<string,string>("Politics","Ulf Kristersson"),
                  new KeyValuePair<string,string>("Politics","Rishi Sunak"),

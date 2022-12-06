@@ -4,7 +4,6 @@ namespace OOP2_Project_Quiz_Game_1_1
 {
     public class Gameplay
     {
-        //Flytta new av objekt hit? Eller skapa new i main men skicka in de objekten här 
         private string Title = "Welcome to the Quiz Game!";
         public int CategoryChoice { get; set; }
         public int CharacterChoice { get; set; }
@@ -26,7 +25,6 @@ namespace OOP2_Project_Quiz_Game_1_1
             Console.WriteLine("\nGreat job " + character.Name + "! You scored " + score + " points!");
             Console.ReadLine();
         }
-       
     }
 }
 

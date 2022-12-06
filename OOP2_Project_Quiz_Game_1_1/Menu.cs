@@ -25,7 +25,7 @@ namespace OOP2_Project_Quiz_Game_1_1
         {
             Console.WriteLine(Title);
             Console.WriteLine("Choose your character:");
-            Console.WriteLine("1: TeddyBear | 2: BuzzLightYear | 3: Unicorn "/*| 4: Random character"*/); // Inte löst random ännu.
+            Console.WriteLine("1: TeddyBear | 2: BuzzLightYear | 3: Unicorn ");
             CharacterChoice = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("\n");
         }
