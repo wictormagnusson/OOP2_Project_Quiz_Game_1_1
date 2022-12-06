@@ -33,7 +33,7 @@ namespace OOP2_Project_Quiz_Game_1_1
 
         public List<string> GetValue(List<KeyValuePair<string, List<string>>> inputList, string choice, int counter)
         {
-            foreach (var item in inputList.Where(question => question.Key == choice && inputList.IndexOf(question) == counter))// Ska lösa en counter som fungerar så att alla frågor visas
+            foreach (var item in inputList.Where(question => question.Key == choice && inputList.IndexOf(question) == counter)) // Ska lösa en counter som fungerar så att alla frågor visas
             {
                 alternative = item.Value;
             }
