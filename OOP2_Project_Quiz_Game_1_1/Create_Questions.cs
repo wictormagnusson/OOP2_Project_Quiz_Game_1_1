@@ -11,9 +11,9 @@ namespace OOP2_Project_Quiz_Game_1_1
             //Pattern matching
             ICategory<List<KeyValuePair<string, string>>, string, int, string> choice = categoryChoice switch
             {
-                1 => category = new Specific_Category(database, count, "Politics"),
-                2 => category = new Specific_Category(database, count, "Geography"), 
-                3 => category = new Specific_Category(database, count, "Music"), 
+                1 => category = new Category(database, count, "Politics"),
+                2 => category = new Category(database, count, "Geography"), 
+                3 => category = new Category(database, count, "Music"), 
 
                 _ => throw new ArgumentException("Invalid category!") 
             };

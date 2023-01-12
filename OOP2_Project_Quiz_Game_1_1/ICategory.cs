@@ -8,9 +8,9 @@ namespace OOP2_Project_Quiz_Game_1_1
         public string question { get; set; }
         public List<string> alternative { get; set; }
         public string answer { get; set; }
-        public List<Question> QuestionList { get; set; }
+        public List<Question> QuestionList { get; set; }  // creates a new list of questions
         public int counter { get; set; }
-        public Tout GetValue(Tin inputList, Tin2 choice, Tin3 counter);
+        public Tout GetValue(Tin inputList, Tin2 choice, Tin3 counter); // gets a specific value
     }
 }
 
