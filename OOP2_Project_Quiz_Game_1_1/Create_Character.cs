@@ -3,7 +3,8 @@ using static OOP2_Project_Quiz_Game_1_1.Character;
 
 namespace OOP2_Project_Quiz_Game_1_1
 {
-    public class Create_Character : Character
+    // Factory implements the interface ICreate_Character
+    public class Create_Character :ICreate_Character
     {
         public Character character { get; set; }
 
